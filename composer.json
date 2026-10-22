@@ -21,7 +21,7 @@
     "require": {
         "php": "^7.3|^8.0|^9.0",
         "illuminate/support": "^7|^8|^9|^10|^11",
-        "joy/core": "^1.0",
+        "romyngo/core": "*",
         "romyngo/voyager": "*"
     },
     "require-dev": {
@@ -32,6 +32,16 @@
         "mockery/mockery": "^1.3",
         "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0|^9.0",
         "phpunit/phpunit": "^9.1|^10.0|^11.0"
+    },
+    "repositories": {
+        "core": {
+            "type": "vcs",
+            "url": "https://github.com/romyngo/joy-core"
+        },
+        "voyager": {
+            "type": "vcs",
+            "url": "https://github.com/romyngo/voyager"
+        }
     },
     "autoload": {
         "psr-4": {

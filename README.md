@@ -16,15 +16,27 @@ By 🐼 [Ramakant Gangwar](https://github.com/rxcod9).
 
 *   Composer Installed
 *   [Install Laravel](https://laravel.com/docs/installation)
-*   [Install Voyager](https://github.com/the-control-group/voyager)
+*   [Install Voyager](https://github.com/romyngo/voyager)
 
 ---
 
 ## Installation
 
+This fork is not published on Packagist, so add the fork repositories to your Laravel project's `composer.json` first (repositories declared inside a dependency are ignored, so all three must be listed here):
+
+```json
+"repositories": {
+    "voyager-core": { "type": "vcs", "url": "https://github.com/romyngo/joy-voyager-core" },
+    "voyager": { "type": "vcs", "url": "https://github.com/romyngo/voyager" },
+    "joy-core": { "type": "vcs", "url": "https://github.com/romyngo/joy-core" }
+}
+```
+
+The `joy-core` repository hosts the `romyngo/core` package (its `composer.json` name), the fork of [rxcod9/joy-core](https://github.com/rxcod9/joy-core).
+
 ```bash
 # 1. Require this Package in your fresh Laravel/Voyager project
-composer require joy/voyager-core
+composer require romyngo/voyager-core:dev-master
 
 # 2. Publish
 php artisan vendor:publish --provider="Joy\VoyagerCore\VoyagerCoreServiceProvider" --force
